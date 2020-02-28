@@ -6,13 +6,15 @@ function maxRow1(input)
     var rowSize = Number(data[0])
     var row =[]
     var res=[]
-    var verbose=0
+    var verbose=1
     for(var i=1 ; i <=rowSize ; i++)
     {
         var flag=0
          row = data[i].split(" ")
          for(var j = 0 ; j <= row.length ;j++)
          {
+             if(verbose)
+             console.log(row[j])
              if(row[j] == 1)
                 {
                     res.push(j)
